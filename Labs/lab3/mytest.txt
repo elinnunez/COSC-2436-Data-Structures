@@ -1,0 +1,2 @@
+magazine,science,compsci F,compsci G,compsci E,chemistry,bio A,english B,compsci H
+art,compsci B,compsci D,novel,compsci C,math,physic,english,compsci A
