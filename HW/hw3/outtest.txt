@@ -1,0 +1,12 @@
+List:
+postfix:AB+CD-*
+prefix:+*ABC
+
+Top of Reserve: postfix:AB+CD-*
+
+Reserve Size: 2
+
+Top of Reserve: EMPTY
+
+Reserve Size: 0
+

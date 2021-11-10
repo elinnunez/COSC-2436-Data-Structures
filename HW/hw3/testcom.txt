@@ -1,0 +1,9 @@
+printList
+pushReserve (postfix)
+printReserveTop
+pushReserve (all)
+printReserveSize
+emptyReserve (0)
+emptyReserve (0)
+printReserveTop
+printReserveSize

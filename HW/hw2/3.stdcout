@@ -1,0 +1,31 @@
+Order = Beginning
+Remove: us
+REMOVED: is just
+REMOVED: just take a deep breath and you'll get it
+Count = 18 vs. AddIndex = 70
+Remove: a
+REMOVED: random
+REMOVED: however this giant message
+REMOVED: here i go typing out a bunch of 
+REMOVED: I hope this assignment isn't too challenging
+REMOVED: random sentences so that this assignment can have
+REMOVED: but if you're having trouble with it don't give up
+Remove: e
+REMOVED: the
+REMOVED: file
+REMOVED: jumble of
+REMOVED: enough inputs 
+REMOVED: this should go to the beginning until it gets sorted
+Remove: i
+REMOVED: in 
+REMOVED: going
+Remove: o
+REMOVED: output
+Remove: u
+Empty
+Remove: y
+Empty
+Adding: second : Index: 1
+Adding: third : Index: 2
+Adding: Not added : Index: 4
+Can't add because index chosen is larger than the list
