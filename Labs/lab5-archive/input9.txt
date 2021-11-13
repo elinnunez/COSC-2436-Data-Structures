@@ -1,0 +1,2 @@
+6
+input ans input output ans output
