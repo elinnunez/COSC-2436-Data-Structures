@@ -1,2 +1,0 @@
-novel,magazine,science
-math,physic,english

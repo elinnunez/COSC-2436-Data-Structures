@@ -1,2 +1,0 @@
-170
-compsci B,compsci A,compsci D,compsci C,chemistry,bio A,english B

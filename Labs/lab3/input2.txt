@@ -1,2 +1,0 @@
-chemistry,compsci A,bio A,english B
-compsci B,compsci D,compsci C
