@@ -1,0 +1,7 @@
+Order = Beginning
+Remove: nothing
+Empty
+Adding: this won't get added : Index: 1
+Can't add because index chosen is larger than the list
+Test case 6 time: 0.004655
+Desired test case 6 time interval: 0.030000 ~ 0.030000

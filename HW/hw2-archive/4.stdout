@@ -1,0 +1,16 @@
+Order = End
+Duplicate: duplicate
+Duplicate: duplicate
+Duplicate: duplicate
+Duplicate: duplicate
+Duplicate: duplicate
+Duplicate: duplicate
+Remove: r
+REMOVED: original
+REMOVED: original2
+REMOVED: original3.0
+REMOVED: originalfour
+Count = 1 vs. AddIndex = 14
+Remove: a
+Test case 4 time: 0.235174
+Desired test case 4 time interval: 0.004900 ~ 0.009100

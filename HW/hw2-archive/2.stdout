@@ -1,0 +1,8 @@
+Order = Length
+Count = 7 vs. AddIndex = 15
+Adding: this sentence should be added to the end of the list : Index: 6
+Remove: test
+REMOVED: test sentence number one
+REMOVED: this file will be testing each of the different commands with your sentences
+Test case 2 time: 0.004871
+Desired test case 2 time interval: 0.006200 ~ 0.011400
