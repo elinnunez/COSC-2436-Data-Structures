@@ -1,0 +1,2 @@
+create isPalindrome function recursively
+--was on exam 1

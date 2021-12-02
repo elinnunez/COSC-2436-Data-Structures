@@ -1,0 +1,9 @@
+1) write a program to find out how many rounds to find one letter in circular linked list ex: Ilovedatastructures
+	1st) delete every outer letter cur->next->next
+	2nd round) delete every other;
+	keep going until 1 letter left
+	return the number of rounds;
+
+function to delete every other
+end of first round when tail.next = head;
+function to find length of linked list every round, if length == 1, stop and return rounds;

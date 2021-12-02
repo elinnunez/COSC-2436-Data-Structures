@@ -1,0 +1,3 @@
+Iterate through both linked lists and add the values to sum, if one of the linked lists is nullptr before the other, sum will just keep adding from the other linked list.
+after each loop past the if statements, cur->next will create a new node for next loop and change the val to sum % 10, since the digits go up to 9, we know that the max carryover with be 1 therefore if the sum is greater than 9, we change sum to 1 and loop again.
+when the lists are being loop through anymore if sum still has a carryover value, it gets appended at the end then set result = to result->next since when the result node was created, the head had the default value of 0 which we don't need. 
