@@ -88,7 +88,7 @@ bool linked<T>::removeBeg() {
 
         size--;
 
-        if(size == 0) || size == 1) {
+        if(size == 0 || size == 1) {
             tail = head;
         }
 
@@ -110,17 +110,25 @@ bool linked<T>::removeEnd() {
             cur = cur->next;
         }
 
-        if(prev = nullptr) {
+        if(prev == nullptr) {
+            //if size = 1;
             node<T>* temp = head;
             head = temp->next;
             tail = head;
             delete temp;
-            size--;
-        } else if () {
-            
+        } else if (prev == head) {
+            //if size = 2;
+            node<T>* temp = tail;
+            head->next = temp->next;
+            tail = head;
+            delete temp;
+        } else {
+            //all other cases
+            prev->next = cur->next;
+            tail = prev;
         }
 
-
+        size--;
     }
 }
 
