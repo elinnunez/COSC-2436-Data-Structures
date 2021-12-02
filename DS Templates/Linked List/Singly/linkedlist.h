@@ -17,10 +17,12 @@ class linked {
         void addatBeg(T val);
         void addatEnd(T val);
         bool removeBeg();
-
         bool removeEnd();
         int getSize();
+        T getHead();
+        T getTail();
         void display();
+        ~linked();
 };
 
 template <typename T>
@@ -81,6 +83,7 @@ bool linked<T>::removeBeg() {
         std::cout << "Empty List, Nothing to Remove at Beginning" << std::endl;
         return false;
     } else {
+        std::cout << "Delete at Beginning Called" << std::endl;
         node<T>* temp = head;
         head = temp->next;
 
@@ -102,6 +105,7 @@ bool linked<T>::removeEnd() {
         std::cout << "Empty List, Nothing to Remove at End" << std::endl;
         return false;
     } else {
+        std::cout << "Delete at End Called" << std::endl;
         node<T>* cur = head;
         node<T>* prev = nullptr;
 
@@ -129,12 +133,55 @@ bool linked<T>::removeEnd() {
         }
 
         size--;
+        return true;
     }
 }
 
 template <typename T>
 int linked<T>::getSize() {
     return size;
+}
+
+template <typename T>
+T linked<T>::getHead() {
+    return head->data;
+}
+
+template <typename T>
+T linked<T>::getTail() {
+    return tail->data;
+}
+
+template <typename T>
+void linked<T>::display() {
+    if(isEmpty()) {
+        std::cout << "Empty Display" << std::endl;
+    } else {
+        std::cout << "Printing Linked List: ";
+        node<T>* cur = head;
+        while(cur != tail) {
+            std::cout << cur->data << "->";
+            cur = cur->next;
+        }
+
+        std::cout << cur->data << std::endl;
+    }
+}
+
+template <typename T>
+linked<T>::~linked() {
+    if(isEmpty()) {
+        std::cout << "No Destruction" << std::endl;
+    } else {
+        while(head != tail) {
+            node<T>* temp = head;
+            head = temp->next;
+            std::cout << "Current Deletion: " << temp->data << std::endl;
+            delete temp;
+        }
+        std::cout << "Final Deletion: " << head->data << std::endl;
+        delete head;
+    }
 }
 
 #endif
