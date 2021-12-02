@@ -133,8 +133,8 @@ bool linked<T>::removeEnd() {
 }
 
 template <typename T>
-    int linked<T>::getSize() {
-        return size;
-    }
+int linked<T>::getSize() {
+    return size;
+}
 
 #endif
