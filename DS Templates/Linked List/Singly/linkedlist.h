@@ -23,6 +23,10 @@ class linked {
         T getTail();
         void display();
         ~linked();
+
+        //todo
+        //addatIndex
+        //removeatIndex
 };
 
 template <typename T>
