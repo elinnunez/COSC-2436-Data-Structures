@@ -1,0 +1,4 @@
+R-3.14 
+Write a short C++ function that repeatedly selects and removes a random entry from an n-element array until the array holds no more entries.
+Assume that you have access to a function random(k), which returns a
+random integer in the range from 0 to k.

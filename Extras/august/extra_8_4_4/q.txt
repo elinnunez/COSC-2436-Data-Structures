@@ -1,0 +1,2 @@
+write a program to read 7 days of the week
+print the weekday then loop through array to print each character individually.

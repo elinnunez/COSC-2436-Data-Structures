@@ -1,0 +1,17 @@
+write function to implement linear probing
+void linearProb(){fill arr}
+bool search(int *arr, key){
+	index = apply hash to get first index
+	i = index
+	if(arr[index] == key):
+                    return true;
+	else:
+	  i++	
+	  while(i != index && arr[i] != key):
+                        if(arr[i] == key)
+	          return true
+                        if(i == 9):
+                              i = 0;
+                         i++
+	return false
+}

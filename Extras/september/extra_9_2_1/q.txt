@@ -1,0 +1,7 @@
+Complete LeetCode #2 and submit your work in a zip file. Feel free to submit this as an extra on the server as well.
+
+https://leetcode.com/problems/add-two-numbers/
+
+Write 2-4 sentences explaining your code
+
+Note: The input will consist of linked lists with 0-100 elements, so keep c++ data type limits in mind. Recursion is your friend.
