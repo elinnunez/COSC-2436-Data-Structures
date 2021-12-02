@@ -1,1 +1,0 @@
-create doubly linked list implementations

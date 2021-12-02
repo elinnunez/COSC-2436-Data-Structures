@@ -1,1 +1,0 @@
-create a program with menu options 1: infix expression to postfix expression, 2: evaluate infix expression, 3: postfix expression to infix expression, 4: exit

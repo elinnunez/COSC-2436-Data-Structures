@@ -1,6 +1,0 @@
-On test 2:
-    infix to postfix conversion using stack
-    steps:
-        need stack of char
-        function to test priority
-        string to put output in or array;

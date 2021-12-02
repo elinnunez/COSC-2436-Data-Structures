@@ -1,2 +1,0 @@
-"R-1.7 Write a short C++ function that takes an integer n and returns the sum of
-all the integers smaller than n."

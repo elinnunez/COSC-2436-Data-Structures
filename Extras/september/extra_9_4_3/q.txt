@@ -1,5 +1,0 @@
-write a function to print odd and even numbers in linked list and return its position
-
-also write in recursively
-
-write a function to delete even and odd numbers in doubly linked list

@@ -1,1 +1,0 @@
-implement quick sort algorithm

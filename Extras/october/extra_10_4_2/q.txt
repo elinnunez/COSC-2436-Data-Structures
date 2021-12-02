@@ -1,6 +1,0 @@
-find a palindrome using a stack or queue
--Do these steps simultaneously:
-       Read >> Push into stack
-       Read >> enqueue into queue
-Once full pop from the stack and dequeue from the queue, and then compare these two letters.
-Once they are not equal you will stop comparing and return false. (In this case they are not equal therefore the input is not a palindrome).

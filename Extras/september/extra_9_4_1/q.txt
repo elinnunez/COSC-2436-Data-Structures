@@ -1,1 +1,0 @@
-implement both regular bubble sort and optimized bubble sort and compare times
