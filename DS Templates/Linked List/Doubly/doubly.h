@@ -14,6 +14,20 @@ class Doubly {
         Doubly();
         Doubly(T value);
         bool isEmpty():
+
+        void addatBeg(T val);
+        void addatIndex(T val, int index);
+        void addatEnd(T val);
+        bool deleteatBeg();
+        bool deleteatIndex(int index);
+        bool deleteatEnd();
+        bool modifyatIndex(T val, int index);
+        int getSize();
+        node<T>* getHead();
+        node<T>* getTail();
+        void display();
+        void displayReverse();
+
 };
 
 template <typename T>
