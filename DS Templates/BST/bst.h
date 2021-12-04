@@ -42,6 +42,8 @@ public:
     void printInOrder(Node* cur); // done
     void printPostOrder(Node* cur); // done
 
+    void printlvlOrder(Node* cur);
+
     ~BST(); // done
 };
 
@@ -334,23 +336,40 @@ void BST::printByLevel(Node *cur)
     }
 }
 
+// Node* BST::findParent(Node* cur, int key) {
+//     if(cur->val == key && cur == root) {
+//         std::cout << "No Parent/Root Node" << std::endl;
+//         return root;
+//     } else {
+//         if(cur->val < key) {
+//             if(cur->right->val == key) {
+//                 return cur;
+//             } else {
+//                 return findParent(cur->right, key);
+//             }
+//         } else if(cur->val > key) {
+//             if(cur->left->val == key) {
+//                 return cur;
+//             } else {
+//                 return findParent(cur->left, key);
+//             }
+//         }
+//     }
+// }
+
 Node* BST::findParent(Node* cur, int key) {
-    if(cur->val == key && cur == root) {
+    if(cur == nullptr) {
+        return cur;
+    } else if(cur->val == key && cur == root) {
         std::cout << "No Parent/Root Node" << std::endl;
         return root;
     } else {
-        if(cur->val < key) {
-            if(cur->right->val == key) {
-                return cur;
-            } else {
-                return findParent(cur->right, key);
-            }
-        } else if(cur->val > key) {
-            if(cur->left->val == key) {
-                return cur;
-            } else {
-                return findParent(cur->left, key);
-            }
+        if(cur->left->val == key || cur->right->val == key) {
+            return cur;
+        } else if (cur->val < key) {
+            return findParent(cur->right, key);
+        } else {
+            return findParent(cur->left, key);
         }
     }
 }
@@ -406,6 +425,35 @@ void BST::printPostOrder(Node* cur) {
         std::cout << cur->val << " ";
         if(cur == root) {
             std::cout<<std::endl;
+        }
+    }
+}
+
+void BST::printlvlOrder(Node* cur) {
+    if(cur == nullptr) {
+        return;
+    } else {
+        std::queue<Node *> bag;
+
+        bag.push(cur);
+
+        while(!bag.empty()) {
+            int bagSize = bag.size();
+            
+            for(int i = 0; i < bagSize; i++) {
+                Node* temp = bag.front();
+                std::cout << bag.front()->val << " ";
+                bag.pop();
+
+                if(temp->left) {
+                bag.push(temp->left);
+                }
+                if(temp->right) {
+                bag.push(temp->right);
+            }
+            }
+
+            std::cout << std::endl;
         }
     }
 }

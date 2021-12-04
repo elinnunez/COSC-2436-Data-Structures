@@ -69,5 +69,8 @@ int main()
 
     cout << newtree.isValidBST(newtree.getRoot()) << endl;
 
+    cout << "Other level order: " << endl;
+    newtree.printlvlOrder(newtree.getRoot());
+
     return 0;
 }
