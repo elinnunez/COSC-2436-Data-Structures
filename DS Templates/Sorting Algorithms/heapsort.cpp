@@ -80,6 +80,18 @@ void maxHeapSort(int arr[], int n)
     }
 }
 
+void maxDeleteElt(int arr[], int &size) {
+    swap(arr[0], arr[size-1]);
+    size--;
+    minheapify(arr, size, 0);
+}
+
+void minDeleteElt(int arr[], int &size) {
+    swap(arr[0], arr[size-1]);
+    size--;
+    maxheapify(arr, size, 0);
+}
+
 void display(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -95,18 +107,25 @@ int main()
     int arr[] = {12, 11, 13, 5, 6, 7, 2, 65, 23, 54, 13, 67};
     int arr2[] = {12, 11, 13, 5, 6, 7, 2, 65, 23, 54, 13, 67};
     int n = sizeof(arr) / sizeof(arr[0]);
+    int n2 = n;
 
     cout << "Unsorted Array: ";
     display(arr, n);
 
     maxHeapSort(arr, n);
-    minHeapSort(arr2, n);
+    minHeapSort(arr2, n2);
 
     cout << "Sorted:" << endl;
+
     cout << "Max Heap: ";
     display(arr, n); // 67 65 54 23 13 13 12 11 7 6 5 2
+    maxDeleteElt(arr, n);
+    display(arr, n); // 65 23 54 11 13 13 12 2 7 6 5 
+
     cout << "Min Heap: ";
-    display(arr2, n); // 2 5 6 7 11 12 13 13 23 54 65 67
+    display(arr2, n2); // 2 5 6 7 11 12 13 13 23 54 65 67
+    minDeleteElt(arr2, n2);
+    display(arr2, n2); // 5 7 6 13 11 12 13 67 23 54 65
 
     return 0;
 }
