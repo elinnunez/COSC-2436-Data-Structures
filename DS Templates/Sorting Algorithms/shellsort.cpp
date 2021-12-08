@@ -34,7 +34,7 @@ int main()
 
     shellSort(ranArr, size);
 
-    cout << "After Shell Sort: ";
+    cout << "After Shell Sort: "; // 14 14 24 41 45 56 62 65 74 85
     display(ranArr, size);
 
     return 0;
