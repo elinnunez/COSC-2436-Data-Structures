@@ -5,11 +5,13 @@
 #include "node.h"
 
 template <typename T>
-class Doubly {
+class Doubly
+{
     private:
-        node<T>* head;
-        node<T>* tail;
+        node<T> *head;
+        node<T> *tail;
         int size;
+
     public:
         Doubly();
         Doubly(T value);
@@ -22,43 +24,49 @@ class Doubly {
         bool deleteatIndex(int index);
         bool deleteatEnd();
         bool modifyatIndex(T val, int index);
-        int getSize();
-        node<T>* getHead();
-        node<T>* getTail();
-        
-        void display(); //done
-        void displayReverse();
+        int getSize(); // done
+        node<T> *getHead();
+        node<T> *getTail();
 
+        void display(); // done
+        void displayReverse();
 };
 
 template <typename T>
-Doubly<T>::Doubly() {
+Doubly<T>::Doubly()
+{
     head = tail = nullptr;
     size = 0;
 }
 
 template <typename T>
-Doubly<T>::Doubly(T value) {
+Doubly<T>::Doubly(T value)
+{
     head = new node<T>(value);
     tail = head;
     size = 1;
 }
 
 template <typename T>
-bool Doubly<T>::isEmpty() {
+bool Doubly<T>::isEmpty()
+{
     return head == nullptr;
 }
 
 template <typename T>
-void Doubly<T>::addatBeg(T val) {
-    if(isEmpty()) {
+void Doubly<T>::addatBeg(T val)
+{
+    if (isEmpty())
+    {
         head = new node<T>(val);
         head->prev = nullptr;
         head->next = nullptr;
         tail = head;
         size = 1;
-    } else {
-        node<T>* temp = new node<T>(val);
+    }
+    else
+    {
+        node<T> *temp = new node<T>(val);
         temp->next = head;
         temp->prev = nullptr;
         head->prev = temp;
@@ -67,16 +75,24 @@ void Doubly<T>::addatBeg(T val) {
     }
 }
 
+template <typename T>
+int Doubly<T>::getSize()
+{
+    return size;
+}
 
 template <typename T>
-void Doubly<T>::display() {
-    if(isEmpty()) {
+void Doubly<T>::display()
+{
+    if (isEmpty())
+    {
         std::cout << "Empty List" << std::endl;
         return;
     }
-    node<T>* cur = head;
+    node<T> *cur = head;
 
-    while(cur->next != nullptr) {
+    while (cur->next != nullptr)
+    {
         std::cout << cur->data << "->";
         cur = cur->next;
     }

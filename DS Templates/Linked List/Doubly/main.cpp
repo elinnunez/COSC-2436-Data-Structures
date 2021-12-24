@@ -14,5 +14,7 @@ int main()
 
     dlist.display();
 
+    std::cout << dlist.getSize() << std::endl;
+
     return 0;
 }
