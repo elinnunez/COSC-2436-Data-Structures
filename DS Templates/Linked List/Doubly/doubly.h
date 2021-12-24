@@ -13,9 +13,9 @@ class Doubly {
     public:
         Doubly();
         Doubly(T value);
-        bool isEmpty():
-
+        bool isEmpty();
         void addatBeg(T val);
+
         void addatIndex(T val, int index);
         void addatEnd(T val);
         bool deleteatBeg();
@@ -25,7 +25,8 @@ class Doubly {
         int getSize();
         node<T>* getHead();
         node<T>* getTail();
-        void display();
+        
+        void display(); //done
         void displayReverse();
 
 };
@@ -46,6 +47,40 @@ Doubly<T>::Doubly(T value) {
 template <typename T>
 bool Doubly<T>::isEmpty() {
     return head == nullptr;
+}
+
+template <typename T>
+void Doubly<T>::addatBeg(T val) {
+    if(isEmpty()) {
+        head = new node<T>(val);
+        head->prev = nullptr;
+        head->next = nullptr;
+        tail = head;
+        size = 1;
+    } else {
+        node<T>* temp = new node<T>(val);
+        temp->next = head;
+        temp->prev = nullptr;
+        head->prev = temp;
+        head = temp;
+        size++;
+    }
+}
+
+
+template <typename T>
+void Doubly<T>::display() {
+    if(isEmpty()) {
+        std::cout << "Empty List" << std::endl;
+        return;
+    }
+    node<T>* cur = head;
+
+    while(cur->next != nullptr) {
+        std::cout << cur->data << "->";
+        cur = cur->next;
+    }
+    std::cout << cur->data << std::endl;
 }
 
 #endif
