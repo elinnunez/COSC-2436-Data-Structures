@@ -13,12 +13,12 @@ class Doubly
         int size;
 
     public:
-        Doubly();
-        Doubly(T value);
-        bool isEmpty();
-        void addatBeg(T val);
+        Doubly(); //done
+        Doubly(T value); //done
+        bool isEmpty(); //done
+        void addatBeg(T val); //done
+        void addatIndex(T val, int index); //done
 
-        void addatIndex(T val, int index);
         void addatEnd(T val);
         bool deleteatBeg();
         bool deleteatIndex(int index);
@@ -71,6 +71,45 @@ void Doubly<T>::addatBeg(T val)
         temp->prev = nullptr;
         head->prev = temp;
         head = temp;
+        size++;
+    }
+}
+
+template <typename T>
+void Doubly<T>::addatIndex(T val, int ind) {
+    if(isEmpty()) {
+        head = new node<T>(val);
+        head->prev = nullptr;
+        head->next = nullptr;
+        tail = head;
+        size++;
+    } else {
+        int i = 0;
+        node<T>* cur = head;
+        while(i != ind && cur != nullptr) {
+            cur = cur->next;
+            i++;
+        }
+
+        if(ind <= 0) {
+            node<T>* temp = new node<T>(val);
+            temp->prev = nullptr;
+            temp->next = head;
+            head->prev = temp;
+            head = temp;
+        } else if (cur == nullptr || ind >= size) {
+            tail->next = new node<T>(val);
+            tail->next->next = nullptr;
+            tail->next->prev = tail;
+            tail = tail->next;
+        } else {
+            node<T>* temp = new node<T>(val);
+            cur->prev->next = temp;
+            temp->prev = cur->prev;
+            cur->prev = temp;
+            temp->next = cur;
+        }
+
         size++;
     }
 }

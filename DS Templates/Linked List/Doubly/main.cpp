@@ -14,6 +14,15 @@ int main()
 
     dlist.display();
 
+    // dlist.addatIndex(32, 15);
+    // dlist.addatIndex(24, 6);
+    // dlist.addatIndex(12, 3);
+    // dlist.addatIndex(11, 0);
+    // dlist.addatIndex(33, -2);
+    // dlist.addatIndex(55, 10);
+
+    dlist.display();
+
     std::cout << dlist.getSize() << std::endl;
 
     return 0;
