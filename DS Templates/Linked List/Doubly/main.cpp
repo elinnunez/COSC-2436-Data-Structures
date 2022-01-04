@@ -25,5 +25,7 @@ int main()
 
     std::cout << dlist.getSize() << std::endl;
 
+    dlist.displayReverse();
+
     return 0;
 }

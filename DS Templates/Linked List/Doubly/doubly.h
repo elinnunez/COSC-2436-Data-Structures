@@ -138,4 +138,22 @@ void Doubly<T>::display()
     std::cout << cur->data << std::endl;
 }
 
+template <typename T>
+void Doubly<T>::displayReverse()
+{
+    if (isEmpty())
+    {
+        std::cout << "Empty List" << std::endl;
+        return;
+    }
+    node<T> *cur = tail;
+
+    while (cur->prev != nullptr)
+    {
+        std::cout << cur->data << "->";
+        cur = cur->prev;
+    }
+    std::cout << cur->data << std::endl;
+}
+
 #endif
