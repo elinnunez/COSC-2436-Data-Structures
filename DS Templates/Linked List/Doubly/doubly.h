@@ -29,7 +29,7 @@ class Doubly
         node<T> *getTail();
 
         void display(); // done
-        void displayReverse();
+        void displayReverse(); // done
 };
 
 template <typename T>
