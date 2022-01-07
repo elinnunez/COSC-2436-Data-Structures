@@ -13,13 +13,13 @@ class Doubly
         int size;
 
     public:
-        Doubly(); //done
-        Doubly(T value); //done
-        bool isEmpty(); //done
-        void addatBeg(T val); //done
-        void addatIndex(T val, int index); //done
-
-        void addatEnd(T val);
+        Doubly();                          // done
+        Doubly(T value);                   // done
+        bool isEmpty();                    // done
+        void addatBeg(T val);              // done
+        void addatIndex(T val, int index); // done
+        void addatEnd(T val); // done
+        
         bool deleteatBeg();
         bool deleteatIndex(int index);
         bool deleteatEnd();
@@ -28,7 +28,7 @@ class Doubly
         node<T> *getHead();
         node<T> *getTail();
 
-        void display(); // done
+        void display();        // done
         void displayReverse(); // done
 };
 
@@ -76,40 +76,72 @@ void Doubly<T>::addatBeg(T val)
 }
 
 template <typename T>
-void Doubly<T>::addatIndex(T val, int ind) {
-    if(isEmpty()) {
+void Doubly<T>::addatIndex(T val, int ind)
+{
+    if (isEmpty())
+    {
         head = new node<T>(val);
         head->prev = nullptr;
         head->next = nullptr;
         tail = head;
         size++;
-    } else {
+    }
+    else
+    {
         int i = 0;
-        node<T>* cur = head;
-        while(i != ind && cur != nullptr) {
+        node<T> *cur = head;
+        while (i != ind && cur != nullptr)
+        {
             cur = cur->next;
             i++;
         }
 
-        if(ind <= 0) {
-            node<T>* temp = new node<T>(val);
+        if (ind <= 0)
+        {
+            node<T> *temp = new node<T>(val);
             temp->prev = nullptr;
             temp->next = head;
             head->prev = temp;
             head = temp;
-        } else if (cur == nullptr || ind >= size) {
+        }
+        else if (cur == nullptr || ind >= size)
+        {
             tail->next = new node<T>(val);
             tail->next->next = nullptr;
             tail->next->prev = tail;
             tail = tail->next;
-        } else {
-            node<T>* temp = new node<T>(val);
+        }
+        else
+        {
+            node<T> *temp = new node<T>(val);
             cur->prev->next = temp;
             temp->prev = cur->prev;
             cur->prev = temp;
             temp->next = cur;
         }
 
+        size++;
+    }
+}
+
+template <typename T>
+void Doubly<T>::addatEnd(T val)
+{
+    if (isEmpty())
+    {
+        head = new node<T>(val);
+        head->next = nullptr;
+        head->prev = nullptr;
+        tail = head;
+        size++;
+    }
+    else
+    {
+        node<T> *temp = new node<T>(val);
+        temp->prev = tail;
+        temp->next = nullptr;
+        tail->next = temp;
+        tail = temp;
         size++;
     }
 }
