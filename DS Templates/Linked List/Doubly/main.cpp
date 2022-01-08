@@ -21,6 +21,8 @@ int main()
     // dlist.addatIndex(33, -2);
     // dlist.addatIndex(55, 10);
 
+    dlist.modifyatIndex(456, 1);
+
     dlist.display();
 
     std::cout << dlist.getSize() << std::endl;

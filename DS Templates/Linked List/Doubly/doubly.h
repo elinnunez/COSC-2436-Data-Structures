@@ -23,7 +23,7 @@ class Doubly
         bool deleteatBeg();
         bool deleteatIndex(int index);
         bool deleteatEnd();
-        bool modifyatIndex(T val, int index);
+        void modifyatIndex(T val, int index); // done
         int getSize(); // done
         node<T> *getHead();
         node<T> *getTail();
@@ -143,6 +143,36 @@ void Doubly<T>::addatEnd(T val)
         tail->next = temp;
         tail = temp;
         size++;
+    }
+}
+
+template <typename T>
+void Doubly<T>::modifyatIndex(T val, int index) {
+    if(isEmpty()) {
+        head = new node<T>(val);
+        head->next = nullptr;
+        head->prev = nullptr;
+        tail = head;
+        size++;
+    } else {
+        if(index <= 0 || index >= size-1) {
+            if(index <= 0) {
+                head->data = val;
+            } else {
+                tail->data = val;
+            }
+        } else {
+            node<T>* cur = head;
+
+            int i = 0;
+
+            while(i != index) {
+                cur = cur->next;
+                i++;
+            }
+
+            cur->data = val;
+        }
     }
 }
 
