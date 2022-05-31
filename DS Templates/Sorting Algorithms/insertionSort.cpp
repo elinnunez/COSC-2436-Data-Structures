@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+/*
+	Time Complexity:
+		Best: O(n)
+		Avg: O(n^2)
+		Worst: O(n^2)
+	
+	Space Complexity: O(1)
+*/
+
 //good for linked list
 
 void insertionSort(int arr[], int size) {
