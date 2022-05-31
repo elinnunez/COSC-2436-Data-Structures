@@ -4,8 +4,8 @@ using namespace std;
 /*
 	Time Complexity:
 		Best: O(n)
-		Avg: O(n^2)
 		Worst: O(n^2)
+		Average: O(n^2)
 	
 	Space Complexity: O(1)
 */
