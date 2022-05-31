@@ -10,15 +10,14 @@ using namespace std;
 	Space Complexity: O(1)
 */
 
-//good for linked list
-
+// good for linked list
 void insertionSort(int arr[], int size) {
-	int cur;
 	
 	for(int i = 1; i < size; i++) {
+		int cur = arr[i];
 		int j = i-1;
-		cur = arr[i];
-		while(j > -1 && arr[j] > cur) {
+
+		while(j >= 0 && cur < arr[j]) {
 			arr[j+1] = arr[j];
 			j--;
 		}
