@@ -53,7 +53,8 @@ int main()
         {"h", {}},
         {"i", {"g", "k"}},
         {"j", {"i"}},
-        {"k", {}}};
+        {"k", {}}
+    };
 
     std::unordered_map<std::string, std::vector<std::string>> graph1{
         {"f", {"g", "i"}},
@@ -61,7 +62,8 @@ int main()
         {"h", {}},
         {"i", {"g", "k"}},
         {"j", {"i"}},
-        {"k", {}}};
+        {"k", {}}
+    };
 
     std::unordered_map<std::string, std::vector<std::string>> graph2{
         {"f", {"g", "i"}},
@@ -69,7 +71,8 @@ int main()
         {"h", {}},
         {"i", {"g", "k"}},
         {"j", {"i"}},
-        {"k", {}}};
+        {"k", {}}
+    };
 
     std::unordered_map<std::string, std::vector<std::string>> graph3{
         {"v", {"x", "w"}},
