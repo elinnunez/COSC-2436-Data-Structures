@@ -1,0 +1,2 @@
+connected components count: https://structy.net/problems/connected-components-count
+Write a function, connectedComponentsCount, that takes in an unordered map respresenting the adjacency list for an undirected graph. The function should return the number of connected components within the graph.
